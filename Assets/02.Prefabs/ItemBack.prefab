@@ -90,9 +90,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23ef84315a6cc0c47b42e9057330bc84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item_Sprite: {fileID: 0}
-  item_Count: 0
+  item_Info: {fileID: 0}
+  slotnum: 0
   inItem: 0
+  slot: {fileID: 6918836628686540894}
   item_Image: {fileID: 6818409523847980502}
   item_Count_Text: {fileID: 1983953384674496633}
 --- !u!1 &7712144376069195435

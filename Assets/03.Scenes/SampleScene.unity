@@ -4412,6 +4412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items_info:
   - {fileID: 11400000, guid: fa08b15538839dc49b60231fb3f78bfb, type: 2}
+  - {fileID: 11400000, guid: f6d2b6d0bb295c14babee21f8ba3e35e, type: 2}
   - {fileID: 11400000, guid: da87405aa1e89ce43aa512a7cb3c5885, type: 2}
 --- !u!1001 &1894127093
 PrefabInstance:

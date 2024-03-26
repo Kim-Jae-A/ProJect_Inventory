@@ -5,6 +5,7 @@ using Unity.VisualScripting.ReorderableList;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using static UnityEditor.Progress;
 
 public class ItemData : MonoBehaviour, IPointerDownHandler, IDragHandler, IDropHandler, IEndDragHandler
 {
@@ -16,10 +17,13 @@ public class ItemData : MonoBehaviour, IPointerDownHandler, IDragHandler, IDropH
 
     #region 아이템 이동을 위한 오브젝트
     public Transform moveSlot;
-
     private Transform slot;
     private Vector2 _beginPoint;
     private Vector2 _moveBegin;
+    #region 슬롯 변경
+    private ItemSlotMove slotMove;
+    public Item endSlotitem;
+    #endregion
     #endregion
 
     [Header("아이템 표시할 백그라운드")]
@@ -28,10 +32,7 @@ public class ItemData : MonoBehaviour, IPointerDownHandler, IDragHandler, IDropH
     [Header("아이템 갯수")]
     [SerializeField] private TextMeshProUGUI item_Count_Text;
 
-    #region 슬롯 변경
-    private ItemSlotMove slotMove;
-    public Item endSlotitem;
-    #endregion
+
 
     private void Awake()
     {
@@ -45,7 +46,12 @@ public class ItemData : MonoBehaviour, IPointerDownHandler, IDragHandler, IDropH
         {
             inItem = true;       
             item_Info = item;
-            item_Image.sprite = item.itemimage; 
+            item_Image.sprite = item.itemimage;
+            if (item.countType == CountType.Countable)
+            {
+                item_Count_Text.text = $"{item.itemCount}";
+                item_Count_Text.gameObject.SetActive(true);
+            }
             item_Image.gameObject.SetActive(true);
         }
         else
@@ -58,7 +64,8 @@ public class ItemData : MonoBehaviour, IPointerDownHandler, IDragHandler, IDropH
     }
     public void ItemUnDrawing()
     {
-        item_Image.gameObject.SetActive(false);
+        item_Image.gameObject.SetActive(false); 
+        item_Count_Text.gameObject.SetActive(false);
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -74,6 +81,11 @@ public class ItemData : MonoBehaviour, IPointerDownHandler, IDragHandler, IDropH
             slotMove.item = item_Info;
             slotMove.startSlot = GetComponent<ItemData>();
             moveSlot.gameObject.SetActive(true);
+            /*if (item_Info.countType == CountType.Countable)
+            {
+                slotMove.itemCount.text = $"{item_Info.itemCount}";
+                slotMove.itemCount.gameObject.SetActive(true);
+            }*/
             ItemUnDrawing();
             moveSlot.position = _beginPoint + (eventData.position - _moveBegin);
         }

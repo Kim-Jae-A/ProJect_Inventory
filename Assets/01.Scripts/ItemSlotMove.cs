@@ -22,13 +22,14 @@ public class ItemSlotMove : MonoBehaviour
 
     public void SwapItemSlot(ItemData _endSlot)
     {
-        if (_endSlot != null)
+        if (_endSlot == null)
         {
-            endSlot = _endSlot;
-            swapitem = item;
-            item = endSlot.item_Info;
-            endSlot.ItemDrawing(swapitem);
-            startSlot.ItemDrawing(item);
+            return;
         }
+        endSlot = _endSlot;
+        swapitem = item;
+        item = endSlot.item_Info;
+        endSlot.ItemDrawing(swapitem);
+        startSlot.ItemDrawing(item);
     }
 }

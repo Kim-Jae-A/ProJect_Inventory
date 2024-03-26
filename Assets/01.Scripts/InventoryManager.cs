@@ -12,11 +12,6 @@ public class InventoryManager : MonoBehaviour
     private void Awake()
     {
         itemDatas = GetComponentsInChildren<ItemData>();
-
-        for (int i = 0; i < itemDatas.Length; i++)
-        {
-            itemDatas[i].slotnum = i;
-        }
     }
 
     public void EatItem(Item item)

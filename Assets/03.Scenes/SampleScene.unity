@@ -4411,9 +4411,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items_info:
-  - {fileID: 11400000, guid: fa08b15538839dc49b60231fb3f78bfb, type: 2}
-  - {fileID: 11400000, guid: f6d2b6d0bb295c14babee21f8ba3e35e, type: 2}
-  - {fileID: 11400000, guid: da87405aa1e89ce43aa512a7cb3c5885, type: 2}
+  - {fileID: 11400000, guid: f0bbfd2cd35c4af48b32f2f9a7592e88, type: 2}
+  - {fileID: 11400000, guid: c627f0aebc242c6429ba23ab1c0d996f, type: 2}
+  - {fileID: 11400000, guid: e2b85eefbac44da4dbbf260fd896ba84, type: 2}
 --- !u!1001 &1894127093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5330,9 +5330,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemImage: {fileID: 5446117036389893949}
   itemCount: {fileID: 1045906962725040786}
-  item: {fileID: 0}
   startSlot: {fileID: 0}
   endSlot: {fileID: 0}
+  item: {fileID: 0}
+  swapitem: {fileID: 0}
 --- !u!1 &8658160751170087320
 GameObject:
   m_ObjectHideFlags: 0

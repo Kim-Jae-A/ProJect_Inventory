@@ -1,0 +1,33 @@
+{
+    "Items": [
+        {
+            "index": 0,
+            "itemName": "포션",
+            "description": "포션이다",
+            "countType": "Countable",
+            "itemType": "Consumable",
+            "imagePath": "Image/potion",
+            "itemCount": "1",
+            "maxCount": "99"
+        },
+        {
+            "index": 1,
+            "name": "자쿰의 투구",
+            "description": "포션이다",
+            "countType": "Countable",
+            "itemType": "Consumable",
+            "sprite": "Image/wkxn",
+            "itemCount": "1",
+            "maxCount": "1"
+        },
+        {
+            "index": 2,
+            "name": "화염의 카타나",
+            "countType": "Countable",
+            "itemType": "Consumable",
+            "sprite": "Image/ghkdua",
+            "itemCount": "1",
+            "maxCount": "1"
+        }
+    ]
+}

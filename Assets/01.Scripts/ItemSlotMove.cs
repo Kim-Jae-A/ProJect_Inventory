@@ -19,7 +19,7 @@ public class ItemSlotMove : MonoBehaviour
     private void OnEnable()
     {
         itemImage.gameObject.SetActive(true);
-        itemImage.sprite = item.itemimage;
+        itemImage.sprite = Resources.Load<Sprite>(item.imagePath);
     }
 
     public void SwapItemSlot(ItemData _endSlot)
@@ -31,6 +31,12 @@ public class ItemSlotMove : MonoBehaviour
         endSlot = _endSlot;
         swapitem = item;
         item = endSlot.item_Info;
+
+        /*if(item.countType == CountType.Countable && swapitem.countType == CountType.Countable)
+        {
+
+        }*/
+
         endSlot.ItemDrawing(swapitem);
         startSlot.ItemDrawing(item);
     }

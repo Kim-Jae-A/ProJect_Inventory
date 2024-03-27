@@ -46,7 +46,7 @@ public class ItemData : MonoBehaviour, IPointerDownHandler, IDragHandler, IDropH
         {
             inItem = true;       
             item_Info = item;
-            item_Image.sprite = item.itemimage;
+            item_Image.sprite = Resources.Load<Sprite>(item.imagePath);
             if (item_Info.countType == CountType.Countable)
             {
                 item_Count_Text.text = $"{item_Info.itemCount}";

@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d727f5bffcbb03f4a9184c50644fa57c, type: 3}
-  m_Name: item01
+  m_Name: 02
   m_EditorClassIdentifier: 
-  index: 1
-  countType: 1
-  itemName: "\uD3EC\uC158"
-  itemimage: {fileID: 21300000, guid: 2f39ce2688475d14a80305fa62f78799, type: 3}
+  index: 2
+  itemName: "\uD654\uC5FC\uC758 \uCE74\uD0C0\uB098"
+  description: "\uCE74\uD0C0\uB098"
+  countType: 0
+  itemType: 0
+  imagePath: Image/ghkdua
   itemCount: 1
-  maxCount: 99
+  maxCount: 1

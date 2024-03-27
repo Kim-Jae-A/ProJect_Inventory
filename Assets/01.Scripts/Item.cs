@@ -7,15 +7,20 @@ using UnityEngine.UIElements.Experimental;
 public class Item : ScriptableObject
 {
     public int index;
-    public CountType countType;
     public string itemName;
-    public Sprite itemimage;
+    public string description;
+    public CountType countType;  
+    public ItemType itemType;
+    public string imagePath;
     public int itemCount;
-    public int maxCount;
-    
+    public int maxCount; 
 }
 
 public enum CountType
 {
     NonCountable, Countable
+}
+public enum ItemType
+{
+    Equipment, Consumable
 }

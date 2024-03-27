@@ -24,6 +24,15 @@ public class InventoryManager : MonoBehaviour
                 itemDatas[i].ItemDrawing(item);
                 break;
             }
+            if (itemDatas[i].item_Info.countType == CountType.Countable && item.itemName == itemDatas[i].item_Info.itemName)
+            {
+                if(itemDatas[i].item_Info.itemCount + item.itemCount <= itemDatas[i].item_Info.maxCount)
+                {
+                    itemDatas[i].item_Info.itemCount += item.itemCount;
+                    itemDatas[i].ItemDrawing(item);
+                    break;
+                }
+            }
         }
     }
 

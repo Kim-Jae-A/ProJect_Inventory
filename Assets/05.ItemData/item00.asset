@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d727f5bffcbb03f4a9184c50644fa57c, type: 3}
   m_Name: item00
   m_EditorClassIdentifier: 
+  index: 0
+  countType: 0
   itemName: "\uC790\uCFF0\uC758 \uD22C\uAD6C"
   itemimage: {fileID: 21300000, guid: 33cf96ea73f44694fa16580dda476557, type: 3}
-  itemCount: 1
+  itemCount: 0
+  maxCount: 0

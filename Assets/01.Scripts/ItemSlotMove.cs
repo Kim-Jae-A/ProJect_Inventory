@@ -9,10 +9,12 @@ public class ItemSlotMove : MonoBehaviour
 {
     public Image itemImage;
     public TextMeshProUGUI itemCount;
-    public Item item;
+    
     public ItemData startSlot;
     public ItemData endSlot;
-    Item swapitem;
+
+    public Item item;
+    public Item swapitem;
 
     private void OnEnable()
     {

@@ -17,5 +17,5 @@ public class Item : ScriptableObject
 
 public enum CountType
 {
-    NonCountable,Countable
+    NonCountable, Countable
 }

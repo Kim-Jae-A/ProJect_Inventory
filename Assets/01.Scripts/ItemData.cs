@@ -47,10 +47,14 @@ public class ItemData : MonoBehaviour, IPointerDownHandler, IDragHandler, IDropH
             inItem = true;       
             item_Info = item;
             item_Image.sprite = item.itemimage;
-            if (item.countType == CountType.Countable)
+            if (item_Info.countType == CountType.Countable)
             {
-                item_Count_Text.text = $"{item.itemCount}";
+                item_Count_Text.text = $"{item_Info.itemCount}";
                 item_Count_Text.gameObject.SetActive(true);
+            }
+            else
+            {
+                item_Count_Text.gameObject.SetActive(false);
             }
             item_Image.gameObject.SetActive(true);
         }
@@ -81,11 +85,6 @@ public class ItemData : MonoBehaviour, IPointerDownHandler, IDragHandler, IDropH
             slotMove.item = item_Info;
             slotMove.startSlot = GetComponent<ItemData>();
             moveSlot.gameObject.SetActive(true);
-            /*if (item_Info.countType == CountType.Countable)
-            {
-                slotMove.itemCount.text = $"{item_Info.itemCount}";
-                slotMove.itemCount.gameObject.SetActive(true);
-            }*/
             ItemUnDrawing();
             moveSlot.position = _beginPoint + (eventData.position - _moveBegin);
         }

@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: item02
   m_EditorClassIdentifier: 
   index: 2
+  countType: 0
   itemName: "\uD654\uC5FC\uC758 \uCE74\uD0C0\uB098"
   itemimage: {fileID: 21300000, guid: 5b7cd21b2755efd4e8d1862924656cd2, type: 3}
-  itemCount: 1
+  itemCount: 0
+  maxCount: 0

@@ -12,20 +12,21 @@
         },
         {
             "index": 1,
-            "name": "자쿰의 투구",
-            "description": "포션이다",
-            "countType": "Countable",
-            "itemType": "Consumable",
-            "sprite": "Image/wkxn",
+            "itemName": "자쿰의 투구",
+            "description": "자투",
+            "countType": "NonCountable",
+            "itemType": "Equipment",
+            "imagePath": "Image/wkxn",
             "itemCount": "1",
             "maxCount": "1"
         },
         {
             "index": 2,
-            "name": "화염의 카타나",
-            "countType": "Countable",
-            "itemType": "Consumable",
-            "sprite": "Image/ghkdua",
+            "itemName": "화염의 카타나",
+            "description": "카타나",
+            "countType": "NonCountable",
+            "itemType": "Equipment",
+            "imagePath": "Image/ghkdua",
             "itemCount": "1",
             "maxCount": "1"
         }

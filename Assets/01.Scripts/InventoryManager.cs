@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
@@ -7,7 +8,7 @@ public class InventoryManager : MonoBehaviour
     ItemData[] itemDatas;
 
     public Item[] items_info;
-    
+    public TextAsset jsonFile;
 
     private void Awake()
     {
@@ -38,10 +39,24 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space)) 
-        { 
-            int random = Random.Range(0, items_info.Length);
-            EatItem(items_info[random]);
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            //int random = Random.Range(0, items_info.Length);
+            jsonFile = Resources.Load<TextAsset>("Items");
+            string jsonString = jsonFile.text;
+            ItemsData itemsData = JsonUtility.FromJson<ItemsData>(jsonString);
+            foreach (Items items in itemsData.Items)
+            {
+                Debug.Log("Item Name: " + items.itemName);
+                Debug.Log("Description: " + items.description);
+                Debug.Log("Count Type: " + items.countType);
+                Debug.Log("Item Type: " + items.itemType);
+                Debug.Log("Image Path: " + items.imagePath);
+                Debug.Log("Item Count: " + items.itemCount);
+                Debug.Log("Max Count: " + items.maxCount);
+                Debug.Log("----------------------------------");
+            }
+            //EatItem(items_info[random]);
         }
     }
 }
